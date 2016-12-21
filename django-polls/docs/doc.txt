@@ -1,0 +1,1 @@
+Website with Polls App, please https://docs.djangoproject.com/en/1.10/intro/ visit for more information.
