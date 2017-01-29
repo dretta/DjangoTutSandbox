@@ -30,8 +30,12 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
+
 INSTALLED_APPS = [
 	'polls.apps.PollsConfig',
+	'companies.apps.CompaniesConfig',#Used for consuming RESTful APIs
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
