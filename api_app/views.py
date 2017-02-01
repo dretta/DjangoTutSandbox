@@ -1,3 +1,6 @@
+from django.shortcuts import render
+
+
 from pyramid.view import view_config
 from xml.etree import ElementTree
 from pyramid.httpexceptions import HTTPFound, HTTPBadGateway, HTTPBadRequest
@@ -31,7 +34,7 @@ ACCESS_TOKEN_URL = '%s/access_token' % BASE_URL
 AUTHORIZE_URL = '%s/authorize' % BASE_URL
 
 # OSM user details URL
-USER_DETAILS_URL = 'http://api.openstreetmap.org/api/0.6/user/details'
+USER_DETAILS_URL = 'http://api06.dev.openstreetmap.org/api/0.6/user/details'
 
 # an oauth consumer instance using our key and secret
 consumer = oauth.Consumer(CONSUMER_KEY, CONSUMER_SECRET)
