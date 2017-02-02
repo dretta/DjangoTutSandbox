@@ -10,27 +10,29 @@ from oauth2_provider.ext.rest_framework import TokenHasReadWriteScope, TokenHasS
 
 # first we define the serializers
 class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
+	class Meta:
+		model = User
+		fields = '__all__'
 
 
 class GroupSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Group
+	class Meta:
+		model = Group
+		fields = '__all__'
 
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+	permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+	queryset = User.objects.all()
+	serializer_class = UserSerializer
 
 
 class GroupViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.IsAuthenticated, TokenHasScope]
-    required_scopes = ['groups']
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
+	permission_classes = [permissions.IsAuthenticated, TokenHasScope]
+	required_scopes = ['groups']
+	queryset = Group.objects.all()
+	serializer_class = GroupSerializer
 
 
 # Routers provide an easy way of automatically determining the URL conf
@@ -42,7 +44,7 @@ router.register(r'groups', GroupViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browseable API.
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    url(r'^admin/', include(admin.site.urls)),
+	url(r'^', include(router.urls)),
+	url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+	url(r'^admin/', include(admin.site.urls)),
 ]
