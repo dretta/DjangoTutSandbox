@@ -1,8 +1,9 @@
 <h2>Available Countries:</h2>
 <ul>
-	{% for country in object_list %}
-		<li><a href="{% url 'finder:country_info' country.code %}">{{ country }}</a></li>
+	{% for country in countries %}
+		<li>{{ country }}</li>
 	{% empty %}
 		<li>Where did the countries go?</li>
 	{% endfor %}
+	
 </ul>
