@@ -28,26 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
-# OAUTH2_PROVIDER = {
-    # 'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups', 'users':'admin'}
-# }
-
-# REST_FRAMEWORK = {
-	# 'DEFAULT_AUTHENTICATION_CLASSES': (
-		# 'rest_framework.authentication.TokenAuthentication',
-		# 'rest_framework.authentication.SessionAuthentication',
-		# 'oauth2_provider.ext.rest_framework.OAuth2Authentication',
-	# ),
-	# 'DEFAULT_PERMISSION_CLASSES': (
-		# 'rest_framework.permissions.IsAdminUser'
-	# ),
-# }
-
-
 INSTALLED_APPS = [
-    # 'rest_framework',
 	'api_app.apps.ApiAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -55,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	# 'oauth2_provider'
 ]
 
 MIDDLEWARE_CLASSES = [
