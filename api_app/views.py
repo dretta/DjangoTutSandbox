@@ -19,6 +19,3 @@ class IndexView(generic.base.TemplateView):
 		context = super(IndexView, self).get_context_data(**kwargs)
 		context['countries'] = countries
 		return context
-
-#def index(request):
-#    return HttpResponse("Hello, world. You're at the polls index.")
