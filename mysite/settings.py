@@ -29,13 +29,15 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
-	'api_app.apps.ApiAppConfig',
+	'polls.apps.PollsConfig',
+	#'api_app.apps.ApiAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'djcelery'
 ]
 
 MIDDLEWARE_CLASSES = [
