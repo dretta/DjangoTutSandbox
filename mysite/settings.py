@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,6 +28,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CELERYBEAT_SCHEDULE = {
+	'add-every-30-seconds': {
+		'task': 'tasks.add',
+		'schedule': timedelta(seconds=30),
+		'args': (16, 16)
+	},
+}
 
 INSTALLED_APPS = [
 	'polls.apps.PollsConfig',
