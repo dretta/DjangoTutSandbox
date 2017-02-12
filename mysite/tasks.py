@@ -18,6 +18,6 @@ def xsum(numbers):
     return sum(numbers)
 	
 	
-# @shared_task
-# def updateDatabase():
-	# do w/e is needed to update database
+@shared_task
+def updateDatabase():
+	pass
