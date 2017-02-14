@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'djcelery'
+	'djcelery',
+	'django_windows_tools',
+
 ]
 
 MIDDLEWARE_CLASSES = [
