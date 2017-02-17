@@ -51,10 +51,6 @@ INSTALLED_APPS = [
 ]
 
 
-import djcelery
-djcelery.setup_loader()
-
-
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
